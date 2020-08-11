@@ -15,7 +15,7 @@ const rutas: Routes =[
 @NgModule({
   declarations: [],
   imports: [
-    RouterModule.forRoot(rutas)
+    RouterModule.forRoot(rutas, {useHash: true})
   ],
   exports: [
     RouterModule
