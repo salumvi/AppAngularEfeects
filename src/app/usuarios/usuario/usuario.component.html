@@ -1,0 +1,33 @@
+<div *ngIf="usuario" class="card-columns">
+    <div class="card">
+        <img [src]="usuario['avatar']" class="card-img-top">
+        <div class="card-body">
+            <h5 class="card-title">{{usuario['first_name'] }} {{usuario['last_name']}}</h5>
+            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <p class="">
+                <span class="text-muted">ID: {{usuario['id']}}</span>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+<div *ngIf="loading" class="alert alert-info text-center" role="alert">
+    <h4 class="alert-heaing">Cargando</h4>
+    <p>
+        <i class="fas fa-sync fa-spin fa-2x"></i>
+    </p>
+
+</div>
+
+
+<div *ngIf="error" class="alert alert-danger text-center" role="alert">
+    <h4 class="alert-heaing">Error</h4>
+    <p>
+        <i class="fas fa-exclamation-circle fa-2x"></i>
+    </p>
+    <pre>
+        {{error | json}}
+    </pre>
+
+</div>
